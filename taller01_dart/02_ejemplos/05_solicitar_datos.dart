@@ -28,7 +28,7 @@ void main() {
   salario = stdin.readLineSync();
   stdout.write('Digite su estatura: \t');
   estatura = stdin.readLineSync();
-  stdout.write('Digite su transporte: \t');
+  stdout.write('Digite su transporte true/false: \t');
   transporte = stdin.readLineSync();
   print("\n" + ("-" * 50) + "\n");
 
