@@ -1,4 +1,4 @@
-DROP DATABASE bbdd_pedidos;
+## DROP DATABASE bbdd_pedidos;
 -- -----------------------------------------------------
 -- Estructura bbdd_pedidos
 -- -----------------------------------------------------
