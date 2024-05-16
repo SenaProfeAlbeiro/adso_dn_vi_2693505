@@ -10,8 +10,15 @@ void main() {
   print(lista2);
 
   dynamic lista3 = [];
-  lista3.add(1);
-  lista3.add(2);
-  lista3.add(3);
+  lista3.add(10);
+  lista3.add(5);
+  lista3.add(3);  
   print(lista3);
+
+  // Lista ordenada Ascendente y Descendente en int
+  List randomNumbers = [14, 51, 23, 45, 6, 3, 22, 1];
+  randomNumbers.sort();
+  print(randomNumbers);
+  randomNumbers = randomNumbers.reversed.toList();
+  print(randomNumbers);
 }

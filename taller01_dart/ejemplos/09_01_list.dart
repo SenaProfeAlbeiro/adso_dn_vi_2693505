@@ -1,9 +1,9 @@
 void main() {
   int num;
-  num = 5;
+  num = 10;
   String curso;
   curso = "Tecnólogo en Desarrollo de Software - ADSO";
-  print(curso.toLowerCase());
+  print(curso.toUpperCase());
   print("El tamaño es: " + curso.length.toString());
   print(curso[num]);
 }
