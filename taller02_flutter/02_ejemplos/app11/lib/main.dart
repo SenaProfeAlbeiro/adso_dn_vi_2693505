@@ -1,4 +1,6 @@
 ////////////////////////////////////////////////////
+
+import 'package:app11/api/ConsultarNoticias.dart';
 import 'package:flutter/material.dart';
 
 ////////////////////////////////////////////////////
@@ -47,30 +49,137 @@ class _HomePrincipalState extends State<HomePrincipal> {
                 title: Text("Noticias"),
                 trailing: Icon(Icons.arrow_circle_right_outlined),
                 onTap: () {
-                  showModalBottomSheet(
-                    isScrollControlled: true,
-                    context: context,
-                    builder: (context) {
-                      return Scaffold(
-                        appBar: AppBar(
-                          title: Text("Navegación"),
-                          backgroundColor: Colors.amber,
-                          foregroundColor: Colors.black54,
-                        ),
-                        body: ListView.builder(
-                          itemCount: 1,
-                          itemBuilder: (BuildContext context, int index) {
-                            return Card(
-                              child: ListTile(
-                                title: Text("Título"),
-                                subtitle: Text("Subtítulo"),
-                              ),
-                            );
-                          },
-                        ),
-                      );
-                    },
-                  );
+                  ConsultarNoticias().then((resp) {
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (context) {
+                        return Scaffold(
+                          appBar: AppBar(
+                            title: Text("Navegación"),
+                            backgroundColor: Colors.amber,
+                            foregroundColor: Colors.black54,
+                          ),
+                          body: ListView.builder(
+                            itemCount: resp.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Card(
+                                child: ListTile(
+                                  title: Text(resp[index].title),
+                                  subtitle: Text(resp[index].body),
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  });
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.newspaper),
+                title: Text("Noticias"),
+                trailing: Icon(Icons.arrow_circle_right_outlined),
+                onTap: () {
+                  ConsultarNoticias().then((resp) {
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (context) {
+                        return Scaffold(
+                          appBar: AppBar(
+                            title: Text("Navegación"),
+                            backgroundColor: Colors.amber,
+                            foregroundColor: Colors.black54,
+                          ),
+                          body: ListView.builder(
+                            itemCount: resp.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Card(
+                                child: ListTile(
+                                  title: Text(resp[index].title),
+                                  subtitle: Text(resp[index].body),
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  });
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.newspaper),
+                title: Text("Noticias"),
+                trailing: Icon(Icons.arrow_circle_right_outlined),
+                onTap: () {
+                  ConsultarNoticias().then((resp) {
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (context) {
+                        return Scaffold(
+                          appBar: AppBar(
+                            title: Text("Navegación"),
+                            backgroundColor: Colors.amber,
+                            foregroundColor: Colors.black54,
+                          ),
+                          body: ListView.builder(
+                            itemCount: resp.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Card(
+                                child: ListTile(
+                                  title: Text(resp[index].title),
+                                  subtitle: Text(resp[index].body),
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  });
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.newspaper),
+                title: Text("Noticias"),
+                trailing: Icon(Icons.arrow_circle_right_outlined),
+                onTap: () {
+                  ConsultarNoticias().then((resp) {
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (context) {
+                        return Scaffold(
+                          appBar: AppBar(
+                            title: Text("Navegación"),
+                            backgroundColor: Colors.amber,
+                            foregroundColor: Colors.black54,
+                          ),
+                          body: ListView.builder(
+                            itemCount: resp.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Card(
+                                child: ListTile(
+                                  title: Text(resp[index].title),
+                                  subtitle: Text(resp[index].body),
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  });
                 },
               ),
             ),
